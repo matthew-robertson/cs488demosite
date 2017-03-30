@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Matt Robertson</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">This Is Me <span>by MATT ROBERTSON</span></a></h1>
+					<nav id="nav">
+						<ul>
+							<li class="current"><a href="index.html">Home</a></li>
+							<li><a href="gallery.html">My Work</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+					<header class="special container">
+						<span class="icon fa-code"></span>
+						<h2>CS488 Final Project - Ray Tracer</h2>
+						<p>A questionably curated collection of pixels.</p>
+					</header>
+
+					<!-- One -->
+						<section class="wrapper style3 container special">
+							<p>As part of CS488 - Intro to Computer Graphics, I have created a final project as an extension of the simple ray tracer created in assignment four. For this project, we were to create our own list of ten objectives and implement them. Mine are as follows.<p>
+
+							<h2> Objective zero: Mirror Reflections </h2>
+							<p> For assignment four I implemented mirror reflections as my extra feature, by recursively raycasting a ray created using glm::reflect()</p>
+							<div class="row">
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/reflno.png" class="image featured"><img src="raytracer/reflno.png" alt="" /></a>
+									</section>
+								</div>
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/greflno.png" class="image featured"><img src="raytracer/greflno.png" alt="" /></a>
+									</section>
+								</div>
+							</div>
+
+							<h2> Objective one: Torus and Cylinder primitives </h2>
+							<p>In addition to the spheres and cubes of assignment four, I have added uncapped (but finite) cylinders and torii. </p>
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/prim.png" class="image featured"><img src="raytracer/prim.png" alt="" /></a>
+									</section>
+								</div>
+
+							<h2> Objective two: Soft Shadows </h2>
+							<p> For this objective, I introduced area lights by casting multiple shadow rays from each interseciton point. These rays were randomly perturbed from the original shadow ray direction.</p>
+							<div class="row">
+								<div class="6u 12u(narrower)">
+
+									<section>
+										<a href="raytracer/softsno.png" class="image featured"><img src="raytracer/softsno.png" alt="" /></a>
+									</section>
+								</div>
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/softs.png" class="image featured"><img src="raytracer/softs.png" alt="" /></a>
+									</section>
+								</div>
+							</div>
+
+							<h2> Objective three: random supersampling </h2>
+							<p>To smooth "jaggies," functionality was added to cast multiple rays through the sub-pixels of each pixel and average the results.</p>
+							<div class="row">
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/supersno.png" class="image featured"><img src="raytracer/supersno.png" alt="" /></a>
+									</section>
+								</div>
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/supers.png" class="image featured"><img src="raytracer/supers.png" alt="" /></a>
+									</section>
+								</div>
+							</div>
+							<div class="row">
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/supersno2.png" class="image featured"><img src="raytracer/supersno2.png" alt="" /></a>
+									</section>
+								</div>
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/supers2.png" class="image featured"><img src="raytracer/supers2.png" alt="" /></a>
+									</section>
+								</div>
+							</div>
+
+							<h2> Objective four: glossy reflections </h2>
+							<p>Implemented by randomly perturbing multiple reflection rays.</p>
+							<div class="row">
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/greflno.png" class="image featured"><img src="raytracer/greflno.png" alt="" /></a>
+									</section>
+								</div>
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/grefl.png" class="image featured"><img src="raytracer/grefl.png" alt="" /></a>
+									</section>
+								</div>
+							</div>
+
+							<h2> Objective five: Phong shading </h2>
+							<p>Instead of using face normals, a mesh's vertex normals are interpolated using barycentric co-ordinates.</p>
+							<div class="row">
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/phongno.png" class="image featured"><img src="raytracer/phongno.png" alt="" /></a>
+									</section>
+								</div>
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/phong.png" class="image featured"><img src="raytracer/phong.png" alt="" /></a>
+									</section>
+								</div>
+							</div>
+
+							<h2> Objective six: texture mapping </h2>
+							<p> Cubes and spheres have had UV co-ordinate calculations made available. These UVs are used with bilinear interpolation to select the proper pixel from the texture.</p>
+							<div class="row">
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/textureno.png" class="image featured"><img src="raytracer/textureno.png" alt="" /></a>
+									</section>
+								</div>
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/texture.png" class="image featured"><img src="raytracer/texture.png" alt="" /></a>
+									</section>
+								</div>
+							</div>
+
+							<h2> Objective seven: depth of field </h2>
+							<p>Implemented by distributing ray origins along a 10x10 "square lens," setting direction such that they all intersect at the focal length.</p>
+							<div class="row">
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/dofno.png" class="image featured"><img src="raytracer/dofno.png" alt="" /></a>
+									</section>
+								</div>
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/dof.png" class="image featured"><img src="raytracer/dof.png" alt="" /></a>
+									</section>
+								</div>
+							</div>
+							<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/dof2.png" class="image featured"><img src="raytracer/dof2.png" alt="" /></a>
+									</section>
+								</div>
+
+							<h2> Objective eight: refraction </h2>
+							<p>Similar to reflecton, implemented by recursively tracing rays refracted according to Snell's laws via glm::refract.</p>
+							<div class="row">
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/refrno.png" class="image featured"><img src="raytracer/refrno.png" alt="" /></a>
+									</section>
+								</div>
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/refr.png" class="image featured"><img src="raytracer/refr.png" alt="" /></a>
+									</section>
+								</div>
+							</div>
+
+							<h2> Objective nine: bump mapping </h2>
+							<p>Using the UV calculation from texture mapping, I use the retrieved colour value to perturb the surface normal of the primitive.</p>
+							<div class="row">
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/bumpno.png" class="image featured"><img src="raytracer/bumpno.png" alt="" /></a>
+									</section>
+								</div>
+								<div class="6u 12u(narrower)">
+									<section>
+										<a href="raytracer/bump.png" class="image featured"><img src="raytracer/bump.png" alt="" /></a>
+									</section>
+								</div>
+							</div>
+
+							<h2> Objective ten: final scene </h2>
+							<p>Rendered in ~three hours by GL11, supersampling is turned off as depth of field fills the same role here. Glossy reflections are also turned off for the sake of time.</p>
+							<div class="6u 12u(narrower)">
+								<section>
+									<img src="raytracer/finalhr2.png" alt="" />
+								</section>
+							</div>
+
+							<h2> Extra objective: multithreading </h2>
+							<p>This was done by breaking the image into a number of parallel chunks. Rendered using my final scene on gl13 at 512x512, with most extensions disabled.</p>
+							<div class="6u 12u(narrower)">
+								<section>
+									<a href="raytracer/multithread.png" class="image featured"><img src="raytracer/multithread.png" alt="" /><
+								</section>
+							</div>
+
+						</section>
+				</article>
+
+			<!-- Footer -->
+				<footer id="footer">
+
+					<ul class="icons">
+						<li><a href="https://www.shadertoy.com/user/twitchingace" class="button fit scrolly">My Shadertoy</a></li>
+						<li><a href="/cdn-cgi/l/email-protection#593038347c6d6934382d2d2b363b3c2b2d2a3637773a38" class="button fit scrolly">My email</a></li>
+						<li><a href="https://github.com/matthew-robertson" class="button fit scrolly">My GitHub</a></li>
+					</ul>
+
+					<ul class="copyright">
+						<li>&copy; Matt Robertson</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
